@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.telefonica.services.model.impl.DepartmentModelImpl">
+		<attributes>
+			<id name="dpt_name" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.services.model.impl.EmployeeModelImpl">
+		<attributes>
+			<id name="emp_id" />
+			<basic name="name" />
+			<basic name="dpt_name" />
+			<basic name="phone_no" />
+			<basic name="photo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.services.model.impl.PhoneModelImpl">
+		<attributes>
+			<id name="phone_no" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.telefonica.services.model.impl.DepartmentImpl" name="Department">
+		<table name="staffMgmt_Department" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.services.model.impl.EmployeeImpl" name="Employee">
+		<table name="staffMgmt_Employee" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.services.model.impl.PhoneImpl" name="Phone">
+		<table name="staffMgmt_Phone" />
+		<attributes />
+	</entity>
+</entity-mappings>

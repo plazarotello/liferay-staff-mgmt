@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.telefonica.services.model.Department" />
+	<import class="com.telefonica.services.model.Employee" />
+	<import class="com.telefonica.services.model.Phone" />
+	<class name="com.telefonica.services.model.impl.DepartmentImpl" table="staffMgmt_Department">
+		<cache usage="read-write" />
+		<id name="dpt_name" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+	</class>
+	<class name="com.telefonica.services.model.impl.EmployeeImpl" table="staffMgmt_Employee">
+		<cache usage="read-write" />
+		<id name="emp_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dpt_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone_no" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="photo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.services.model.impl.PhoneImpl" table="staffMgmt_Phone">
+		<cache usage="read-write" />
+		<id name="phone_no" type="int">
+			<generator class="assigned" />
+		</id>
+	</class>
+</hibernate-mapping>

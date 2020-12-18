@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.telefonica.services.service.DepartmentLocalService" class="com.telefonica.services.service.impl.DepartmentLocalServiceImpl" />
+	<bean id="com.telefonica.services.service.persistence.DepartmentPersistence" class="com.telefonica.services.service.persistence.DepartmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.services.service.EmployeeLocalService" class="com.telefonica.services.service.impl.EmployeeLocalServiceImpl" />
+	<bean id="com.telefonica.services.service.persistence.EmployeePersistence" class="com.telefonica.services.service.persistence.EmployeePersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.services.service.PhoneLocalService" class="com.telefonica.services.service.impl.PhoneLocalServiceImpl" />
+	<bean id="com.telefonica.services.service.persistence.PhonePersistence" class="com.telefonica.services.service.persistence.PhonePersistenceImpl" parent="basePersistence" />
+</beans>

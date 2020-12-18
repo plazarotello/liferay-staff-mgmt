@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.telefonica.services">
+	<author>plazaro</author>
+	<namespace>staffMgmt</namespace>
+    <entity name="Employee" local-service="true" remote-service="false">
+        <column type="long" primary="true" name="emp_id"></column>
+        <column name="name" type="String"></column>
+        <column name="dpt_name" type="String"></column>
+        <column name="phone_no" type="int"></column>
+        <column name="photo" type="String"></column>
+        <order by="asc">
+            <order-column name="emp_id" order-by="asc"></order-column>
+        </order>
+    </entity>
+    <entity name="Phone" local-service="true" remote-service="false">
+        <column name="phone_no" type="int" primary="true"></column>
+    </entity>
+    <entity name="Department" remote-service="false" local-service="true">
+        <column name="dpt_name" type="String" primary="true"></column>
+    </entity>
+</service-builder>
