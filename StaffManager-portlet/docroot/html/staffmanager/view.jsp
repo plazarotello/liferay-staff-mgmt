@@ -19,7 +19,7 @@
 
 
 <!-- Staff table and search UI -->
-<liferay-ui:search-container delta="1" deltaConfigurable="true" emptyResultsMessage="No staff available.">
+<liferay-ui:search-container delta="5" deltaConfigurable="true" emptyResultsMessage="No staff available.">
 	<liferay-ui:search-container-results
 		results="<%= EmployeeLocalServiceUtil.getEmployees(searchContainer.getStart(), searchContainer.getEnd()) %>"
 		total="<%= EmployeeLocalServiceUtil.getEmployeesCount() %>"
