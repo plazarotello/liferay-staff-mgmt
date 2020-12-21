@@ -1,3 +1,5 @@
+*.class
+
 !/sql/update-*.sql
 **/.gradle
 **/.settings
